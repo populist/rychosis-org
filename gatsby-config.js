@@ -3,6 +3,13 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+    {
+      resolve: 'gatsby-source-drupal',
+      options: {
+        baseUrl: 'https://dev-rychosis-d8.pantheonsite.io/',
+        apiBase: 'jsonapi', // endpoint of Drupal server
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
