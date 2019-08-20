@@ -2,18 +2,19 @@ import React from 'react'
 import { Link, graphql } from "gatsby"
 
 import Layout from '../components/layout'
-import MMLCImage from '../components/image'
+import WebOpsImage from '../components/image'
 
 const IndexPage = ({ data }) => (
   <Layout>
     <h1>WebOps Resources</h1>
     { data.allNodePersonalLink.edges.map(({ node }) => (
       <div>
-        <p><a href={ node.field_url.uri }>{ node.title }</a></p>
+        <p><b><a href={ node.field_url.uri }>{ node.title }</a></b><br />
+        <em>{ node.field_teaser }</em></p>
       </div>
     ))}
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <MMLCImage />
+      <WebOpsImage />
     </div>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
@@ -29,6 +30,7 @@ export const query = graphql`
           uri
           title
        	 },
+        field_teaser
       	}
     	}
   	}
