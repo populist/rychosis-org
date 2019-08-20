@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: 'Pantheon Headless Proof of Concept',
@@ -9,6 +11,30 @@ module.exports = {
         baseUrl: 'https://dev-rychosis-d8.pantheonsite.io/',
         apiBase: 'jsonapi', // endpoint of Drupal server
       },
+    },
+    {
+      resolve: 'gatsby-source-airtable',
+      options: {
+        apiKey: process.env.AIRTABLE_API_KEY,
+        tables: [
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: 'Events',
+            // optional, e.g. "text/markdown", "fileNode"
+            // mapping: { 'CASE_SENSITIVE_COLUMN_NAME': 'VALUE_FORMAT' },
+            // optional, for deep linking to records across tables.
+            tableLinks: ['Presentations']
+          },
+          {
+            baseId: process.env.AIRTABLE_BASE_ID,
+            tableName: 'Presentation Instances',
+            // optional, e.g. "text/markdown", "fileNode"
+            // mapping: { 'CASE_SENSITIVE_COLUMN_NAME': 'VALUE_FORMAT' },
+            // optional, for deep linking to records across tables.
+            tableLinks: ['People', 'PARTIALLY USED: Presentations', 'Events']
+          },
+        ]
+      }
     },
     'gatsby-plugin-react-helmet',
     {

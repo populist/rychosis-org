@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <WebOpsImage />
     </div>
-    <Link to="/page-2/">See WebOps Events</Link>
+    <Link to="/presentations/">See WebOps Events</Link>
   </Layout>
 )
 
