@@ -5,9 +5,8 @@ import Layout from '../components/layout'
 
 const SecondPage = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <h1>WebOps Events (From AirTable)</h1>
+    <Link to="/">Go back to WebOps Resources</Link>
   </Layout>
 )
 
