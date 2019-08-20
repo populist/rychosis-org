@@ -6,7 +6,7 @@ import MMLCImage from '../components/image'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>Matthew Cheney</h1>
+    <h1>WebOps Resources</h1>
     { data.allNodePersonalLink.edges.map(({ node }) => (
       <div>
         <p><a href={ node.field_url.uri }>{ node.title }</a></p>
