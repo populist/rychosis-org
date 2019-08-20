@@ -31,7 +31,7 @@ module.exports = {
             // optional, e.g. "text/markdown", "fileNode"
             // mapping: { 'CASE_SENSITIVE_COLUMN_NAME': 'VALUE_FORMAT' },
             // optional, for deep linking to records across tables.
-            tableLinks: ['People', 'PARTIALLY USED: Presentations', 'Events']
+            tableLinks: ['People', 'PARTIALLY_USED:_Presentations', 'Events']
           },
         ]
       }
