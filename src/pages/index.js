@@ -6,7 +6,7 @@ import WebOpsImage from '../components/image'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <h1>WebOps Resources</h1>
+    <h1>WebOps Resources (From Drupal 8)</h1>
     { data.allNodePersonalLink.edges.map(({ node }) => (
       <div>
         <p><b><a href={ node.field_url.uri }>{ node.title }</a></b><br />
@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
     <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <WebOpsImage />
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Link to="/page-2/">See WebOps Events</Link>
   </Layout>
 )
 
